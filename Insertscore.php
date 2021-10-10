@@ -18,10 +18,11 @@
     $id_card=$_POST['id_card'];
     $id=$_POST['id'];
     $sum_score=$_POST['sum_score'];
+    $place=$_POST['place'];
 
 
-    $sql="INSERT INTO `evaluatepage` (`id_card`, `id`, `score1`, `score2`, `score3`, `score4`, `score5`, `score6`, `score7`, `score8`, `score9`, `score10`, `sum_score`) 
-    VALUES ('".$id_card."', '".$id."', '".$score1."', '".$score2."', '".$score3."', '".$score4."', '".$score5."', '".$score6."', '".$score7."', '".$score8."', '".$score9."', '".$score10."', '".$sum_score."')"; 
+    $sql="INSERT INTO `evaluatepage` (`id_card`, `id`, `score1`, `score2`, `score3`, `score4`, `score5`, `score6`, `score7`, `score8`, `score9`, `score10`, `sum_score`, `place`) 
+    VALUES ('".$id_card."', '".$id."', '".$score1."', '".$score2."', '".$score3."', '".$score4."', '".$score5."', '".$score6."', '".$score7."', '".$score8."', '".$score9."', '".$score10."', '".$sum_score."','".$place."')"; 
 
     /*INSERT INTO `evaluatepage` (`id_card`, `id`, `score1`, `score2`, `score3`, `score4`, `score5`, 
     `score6`, `score7`, `score8`, `score9`, `score10`, `sum_score`) VALUES (33, 27, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 2)*/
@@ -31,7 +32,7 @@
     }else{
         echo "insert fail";
     }
-    echo($sql);
+    //echo($sql);
     mysqli_close($con);
 
    
